@@ -9,10 +9,15 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text):
-#TODO: Игнорировать символ "—".
     cntr = Counter(text)
-    return cntr.most_common(10)
+    top_words = cntr.most_common(10)
+    return top_words
+
+
+def print_most_frequent_words(top_words):
+    for word_number, word in enumerate(top_words):
+        print('{0}. {1}: {2}'.format(word_number + 1, word[0], word[1]))
 
 
 if __name__ == '__main__':
-    print(get_most_frequent_words(load_data(input('File path: '))))
+    print_most_frequent_words(get_most_frequent_words(load_data(input('File path: '))))
