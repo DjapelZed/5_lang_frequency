@@ -2,15 +2,15 @@ from collections import Counter
 
 
 def load_data(filepath):
-    file_open = open(filepath,'r')
-    file_data = file_open.read()
-    data_split = file_data.split()
-    return data_split
+    with open(filepath, 'r') as file_data:
+        text_in_file = file_data.read().lower()
+        words_in_file = text_in_file.split()
+    return words_in_file
 
 
 def get_most_frequent_words(text):
-    counter = Counter(text)
-    most_frequent_words = counter.most_common(10)
+    word_counter = Counter(text)
+    most_frequent_words = word_counter.most_common(10)
     return most_frequent_words
 
 
