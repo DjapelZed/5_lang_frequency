@@ -1,7 +1,7 @@
-# 5_lang_frequency
-Скрипт **lang_frequency** проводит частотный анализ.
-#Как использовать
-Запусти **lang_frequency.py**. Вбей путь к файлу. 
-Скрипт выведет на экран 10 самых употребляемых слов в тексте.
-# Требования
+# Frequency Analysis
+Script **lang_frequency** makes frequency analysis.
+# How to
+Run **lang_frequency.py**. Input path to file. 
+Script will print 10 most frequence words which used in your text.
+# Requirments
 **Python 3**
